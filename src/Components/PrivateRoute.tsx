@@ -1,8 +1,0 @@
-import { Navigate } from "react-router-dom";
-import { useAuth } from "../Context/AuthContext";
-import { JSX } from "react/jsx-runtime";
-
-export default function PrivateRoute({ children }: { children: JSX.Element }) {
-  const { user } = useAuth();
-  return user ? children : <Navigate to="/login" />;
-}
