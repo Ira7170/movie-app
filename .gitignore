@@ -39,14 +39,7 @@ functions/node_modules/
 .firebase-debug.log
 .firebase-debug.*.log
 
-# Firebase CLI config (if sensitive)
-.firebaserc
 
-# Local emulator files
-firebase.json
-firestore.indexes.json
-firestore.rules
-storage.rules
 
 # ========================
 # Environment Variables
