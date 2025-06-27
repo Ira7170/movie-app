@@ -31,9 +31,3 @@ const moviesSlice = createSlice({
 export const { addMovie, updateMovie, deleteMovie } = moviesSlice.actions;
 export default moviesSlice.reducer;
 
-// ✔️	Feature
-// ✅	Clean Movie interface with optional description
-// ✅	Proper use of createSlice and PayloadAction
-// ✅	Immutable deletion with filter()
-// ✅	Proper state[index] = action.payload update
-// ✅	Correct export of reducer and actions

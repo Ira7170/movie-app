@@ -1,6 +1,6 @@
 
 import React, { useState } from 'react';
-import { useAppDispatch, useAppSelector } from '../../../Features/hooks';
+import { useAppDispatch, useAppSelector } from '../../../App/hooks';
 import { addMovie, updateMovie, deleteMovie } from '../../../Features/moviesSlice';
 import MovieForm from '../../AdminComponents/MovieForm';
 import MovieList from '../../AdminComponents/MovieList';

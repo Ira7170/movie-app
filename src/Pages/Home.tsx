@@ -1,5 +1,5 @@
 import React from 'react';
-import MovieDashboard from '../Components/UserComponents/MovieDashboard/MovieDashboard';
+import MovieDashboard from '../Components/UserUI/MovieDashboard/MovieDashboard';
 
 const Home: React.FC = () => {
   return (

@@ -1,7 +1,7 @@
 
 import React from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
-import { useAppSelector, useAppDispatch } from '../Features/hooks';
+import { useAppSelector, useAppDispatch } from '../App/hooks';
 import { updateMovie, deleteMovie } from '../Features/moviesSlice';
 import MovieForm from '../Components/AdminComponents/MovieForm';
 
