@@ -1,11 +1,10 @@
-import React from 'react';
-import MovieDashboard from '../Components/UserUI/MovieDashboard/MovieDashboard';
 
-const Home: React.FC = () => {
+import React from "react";
+
+const Home = () => {
   return (
     <div>
-      <h1>Welcome to the Movie App</h1>
-      <MovieDashboard />
+      Welcome to the app! Please log in or register.
     </div>
   );
 };

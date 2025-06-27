@@ -1,9 +1,9 @@
 
 import React, { useState } from 'react';
-import { useAppDispatch, useAppSelector } from '../../../App/hooks';
-import { addMovie, updateMovie, deleteMovie } from '../../../Features/moviesSlice';
-import MovieForm from '../../AdminComponents/MovieForm';
-import MovieList from '../../AdminComponents/MovieList';
+import { useAppDispatch, useAppSelector } from '../../App/hooks';
+import { addMovie, updateMovie, deleteMovie } from '../../Features/moviesSlice';
+import MovieForm from '../../Components/AdminComponents/MovieForm';
+import MovieList from '../../Components/AdminComponents/MovieList';
 
 const MovieDashboard: React.FC = () => {
   const dispatch = useAppDispatch();
