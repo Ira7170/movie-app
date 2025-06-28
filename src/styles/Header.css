@@ -110,7 +110,17 @@ button {
   nav a:hover {
     transform: translateY(-3px);
   }
-  header button {
+  header > button {
     display: none;
+  }
+  nav button {
+    color: #fff;
+    padding: .5rem 2rem;
+    background-color: rgb(68, 22, 177);
+    border-radius: 5px;
+    transition: transform 0.4s ease;
+  }
+  nav button:hover {
+    transform: translateY(-3px);
   }
 }
