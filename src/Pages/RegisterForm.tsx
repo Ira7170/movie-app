@@ -43,17 +43,17 @@ export const RegisterForm = () => {
                     <div>
                         <label>Email</label>
                         <input name="email" type='email' value={formik.values.email} placeholder='Email' onChange={formik.handleChange} />
-                        {formik.errors.email && <div>{formik.errors.email}</div>}
+                        {formik.errors.email && <div className='errors'>{formik.errors.email}</div>}
                     </div>
                     <div>
                         <label>Full Name</label>
                         <input name="fullName" type='text' value={formik.values.fullName} placeholder='Full Name' onChange={formik.handleChange} />
-                        {formik.errors.fullName && <div>{formik.errors.fullName}</div>}
+                        {formik.errors.fullName && <div className='errors'>{formik.errors.fullName}</div>}
                     </div>
                     <div>
                         <label>Password</label>
                         <input name="password" type="password" value={formik.values.password} placeholder='Password' onChange={formik.handleChange} />
-                        {formik.errors.password && <div>{formik.errors.password}</div>}
+                        {formik.errors.password && <div className='errors'>{formik.errors.password}</div>}
                     </div>
                     {error && <div>{error}</div>}
                     <button type="submit" disabled={status === "loading"}>
