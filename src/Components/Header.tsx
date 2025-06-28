@@ -4,11 +4,19 @@ import '../styles/Header.css'
 import { FaHamburger } from "react-icons/fa";
 import { IoClose } from "react-icons/io5";
 import { useState } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { AppDispatch, RootState } from '../App/store'
+import { logoutUser } from '../Features/authSlice';
 
 export const Header = () => {
     const [active, setActive] = useState(false);
+    const user = useSelector((state: RootState) => state.auth.user);
+      const dispatch = useDispatch<AppDispatch>();
     const handleNavActive = () => {
         setActive(!active)
+    }
+    const handleLogout = () => {
+        dispatch(logoutUser());
     }
     const Icon = FaHamburger as unknown as React.FC<React.SVGProps<SVGSVGElement>>;
     const CloseIcon = IoClose as unknown as React.FC<React.SVGProps<SVGSVGElement>>;
@@ -22,7 +30,11 @@ export const Header = () => {
                 <Link to='/'>Home</Link>
                 <Link to='/'>About</Link>
                 <Link to='/'>Contacts</Link>
-                <Link to='/login'>Login</Link>
+                {user ? (
+                    <button onClick={handleLogout}>Logout</button>
+                ) : (
+                    <Link to='/login'>Login</Link>
+                )}
                 <Link to='/register'>Get Started</Link>
             </nav>
             { active ? (
