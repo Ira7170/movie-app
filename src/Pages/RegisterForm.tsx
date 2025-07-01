@@ -6,6 +6,7 @@ import { useFormik } from "formik";
 import * as yup from "yup";
 import FormLeftSide from '../Components/FormLeftSide';
 import '../styles/Form.css'
+import { useEffect } from 'react';
 
 const validationSchema = yup.object({
   email: yup.string().email("Enter a valid email.").required("Email is required."),
@@ -32,6 +33,10 @@ export const RegisterForm = () => {
     },
   });
 
+  useEffect(() => {
+    dispatch(clearError());
+  }, [dispatch]);
+
   return (
     <div className="container">
         <FormLeftSide/>
@@ -55,7 +60,7 @@ export const RegisterForm = () => {
                         <input name="password" type="password" value={formik.values.password} placeholder='Password' onChange={formik.handleChange} />
                         {formik.errors.password && <div className='errors'>{formik.errors.password}</div>}
                     </div>
-                    {error && <div>{error}</div>}
+                    {error && <div>Invalid credentials. Please try again.</div>}
                     <button type="submit" disabled={status === "loading"}>
                         Register
                     </button>
