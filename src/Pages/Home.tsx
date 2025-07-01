@@ -1,15 +1,13 @@
 import '../styles/Home.css'
 import movie_projector from '../assets/movie_projector.png'
-import shape_1 from '../assets/shape_1.png'
-import shape_2 from '../assets/shape_2.png'
 import figure_accent from '../assets/figure_accent.svg'
 
 const Home = () => {
   return (
     <div className='home'>
       <section>
-        <div className="left">
-            <div className="content">
+        <div className='left'>
+            <div>
               <h1>
                 <img src={movie_projector} alt='Camera logo'/>
                 Gotcha.
@@ -19,11 +17,11 @@ const Home = () => {
               Manage & organize movie collections better. Join Gotcha now for a better couch experience.
             </p>
           </div>
-          <img src={shape_1} alt="Shape 1" />
+          <div className='white-shape'></div>
         </div>
-        <div className="right">
-          <img src={shape_2} alt="Shape 2" />
-          <img src={figure_accent} alt="Figure Accent" />
+        <div className='right'>
+          <div className='white-shape'></div>
+          <img src={figure_accent} alt='Figure Accent' />
         </div>
       </section>
       <section>
