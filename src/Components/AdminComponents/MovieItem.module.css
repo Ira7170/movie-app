@@ -1,0 +1,53 @@
+.listItem {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 8px 0;
+  border-bottom: 1px solid #ccc;
+}
+
+.poster {
+  width: 60px;
+  height: 90px;
+  object-fit: cover;
+  border-radius: 4px;
+  flex-shrink: 0;
+}
+
+.movieInfo {
+  flex-grow: 1;
+}
+
+.movieTitle {
+  font-weight: bold;
+  font-size: 1.1rem;
+  color: #333;
+  text-decoration: none;
+}
+
+.movieTitle:hover {
+  text-decoration: underline;
+}
+
+.movieSubtitle {
+  display: block;
+  font-size: 0.9rem;
+  color: #666;
+  margin-top: 4px;
+}
+
+.buttons button {
+  margin-left: 8px;
+  cursor: pointer;
+  background: none;
+  border: none;
+  font-size: 1rem;
+}
+
+.editBtn {
+  color: #007bff;
+}
+
+.deleteBtn {
+  color: #d9534f;
+}

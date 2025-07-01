@@ -1,0 +1,87 @@
+.formContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  background: #f4f0ff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(99, 32, 238, 0.1);
+  margin-bottom: 30px;
+}
+
+.inputField {
+  flex: 1 1 200px;
+  padding: 10px 12px;
+  font-size: 15px;
+  border: 1.5px solid #ccc;
+  border-radius: 8px;
+  transition: border-color 0.3s ease;
+}
+
+.inputField:focus {
+  border-color: #6320EE;
+  outline: none;
+}
+
+.textArea {
+  flex: 1 1 100%;
+  min-height: 80px;
+  resize: vertical;
+}
+
+.buttonGroup {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top: 10px;
+}
+
+.submitBtn {
+  background-color: #6320EE;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 12px 24px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+  flex-grow: 1;
+  min-width: 120px;
+}
+
+.submitBtn:hover {
+  background-color: #4b179b;
+}
+
+.cancelBtn {
+  background-color: #888;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 12px 24px;
+  cursor: pointer;
+  font-weight: 600;
+  flex-grow: 1;
+  min-width: 120px;
+  transition: background-color 0.3s ease;
+}
+
+.cancelBtn:hover {
+  background-color: #666;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .inputField, .textArea {
+    flex: 1 1 100%;
+  }
+
+  .buttonGroup {
+    flex-direction: column;
+  }
+
+  .submitBtn, .cancelBtn {
+    min-width: 100%;
+  }
+}
